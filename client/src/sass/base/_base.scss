@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+p {
+  color: rgb(111, 0, 255);
+  background-color: rgb(192, 24, 24);
+  font-weight: bolder;
+}
+
+body {
+  background-color: $color-bg-primary;
+}

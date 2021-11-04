@@ -1,9 +1,53 @@
-p {
-  color: rgb(111, 0, 255);
-  background-color: rgb(180, 180, 180);
-  font-weight: bolder;
-}
+@import "abstracts/variables";
+@import "base/base";
 
-body {
-  background-color: azure;
+.container {
+  width: 100wv;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "aside main main" "footer footer footer";
+  grid-template-rows: auto 50px;
+
+  main {
+    grid-area: main;
+    background-color: #ebeff2;
+    display: flex;
+    padding-top: 10%;
+    .groceries {
+      border: 1px solid red;
+      display: flex;
+      gap: 50px;
+
+      &__form {
+        input {
+          display: block;
+          padding: 10px;
+          margin: 10px;
+          width: 15em;
+        }
+      }
+
+      &__list {
+        padding: 10px;
+
+        ul {
+          list-style: none;
+          li {
+            padding-bottom: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+  aside {
+    grid-area: aside;
+    transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+  footer {
+    grid-area: footer;
+    background-color: #d7dde1;
+  }
 }
