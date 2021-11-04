@@ -6,6 +6,7 @@ const AddItem = () => {
       <form>
         <input type="text" placeholder="Grocery item"></input>
         <input type="text" placeholder="Quantity"></input>
+        <input type="button" value="ADD" />
       </form>
     </div>
   );
