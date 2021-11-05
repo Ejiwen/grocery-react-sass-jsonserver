@@ -1,4 +1,10 @@
 footer {
   grid-area: footer;
   background-color: #d7dde1;
+  text-align: right;
+  border-top: 2px solid #fd8a05;
+
+  p {
+    padding: 0 20px;
+  }
 }

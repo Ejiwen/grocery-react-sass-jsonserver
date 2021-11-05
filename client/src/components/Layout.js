@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
           backgroundPosition: "top",
         }}
       ></aside>
-      <footer>Footer</footer>
+      <footer> <p> Cheikhany Ejiwen  ©  2021 </p></footer>
     </div>
   );
 };
