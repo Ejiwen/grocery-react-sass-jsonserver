@@ -1,13 +1,12 @@
 import React from "react";
 
-const Items = () => {
+const Items = ({items}) => {
   return (
     <div className="groceries__list">
       <ul>
-        <li>Banana </li>
-        <li>Pommes </li>
-        <li>Dettes </li>
-        <li>Orange </li>
+        {
+          items.map((item) => <li> {item.name}  <span>{item.qty}</span> </li>)
+        }
       </ul>
     </div>
   );
