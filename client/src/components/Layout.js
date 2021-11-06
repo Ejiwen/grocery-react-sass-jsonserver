@@ -5,6 +5,7 @@ import bgAside from "../../assets/groceries.png";
 const Layout = ({ children }) => {
   return (
     <div className="container">
+      <header> <h2> Grocery List </h2> </header>
       <main>{children}</main>
       <aside
         style={{

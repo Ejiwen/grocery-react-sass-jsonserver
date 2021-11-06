@@ -2,11 +2,10 @@ main {
   grid-area: main;
   background-color: #ebeff2;
   display: flex;
-  padding-top: 10%;
+  height: 87vh;
   .groceries {
     display: flex;
     gap: 50px;
-
     &__form {
       input {
         display: block;
@@ -31,5 +30,13 @@ main {
         }
       }
     }
+
   }
+  @media screen and (max-width: 600px) {
+    .groceries {
+      flex-direction: column;
+    }
+  }
+
 }
+
