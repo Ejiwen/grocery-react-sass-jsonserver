@@ -1,18 +1,13 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Dettes",
-      "qty": 10
+      "name": "Banana",
+      "qty": "9",
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Orange",
-      "qty": 5
-    },
-    {
-      "item": "wes",
-      "quantity": "4",
+      "name": "Carottes",
+      "qty": "2",
       "id": 3
     }
   ]
