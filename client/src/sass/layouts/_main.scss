@@ -27,16 +27,16 @@ main {
         list-style: none;
         li {
           padding-bottom: 0.7rem;
+          span {
+            padding: 0 10px;
+          }
         }
       }
     }
-
   }
   @media screen and (max-width: 600px) {
     .groceries {
       flex-direction: column;
     }
   }
-
 }
-

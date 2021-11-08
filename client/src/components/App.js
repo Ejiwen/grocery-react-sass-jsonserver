@@ -34,11 +34,15 @@ const App = () => {
     }).then(() => console.log("The item is deleted ..."));
   }
 
+  function editItem(id) {
+    console.log("Edite Item");
+  }
+
   return (
     <Layout>
       <div className="groceries">
         <AddItem addItem={addItem} />
-        <Items items={items} removeItem={removeItem} />
+        <Items items={items} removeItem={removeItem} editItem={editItem} />
       </div>
     </Layout>
   );
