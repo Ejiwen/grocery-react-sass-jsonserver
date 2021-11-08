@@ -34,8 +34,17 @@ const App = () => {
     }).then(() => console.log("The item is deleted ..."));
   }
 
-  function editItem(id) {
-    console.log("Edite Item");
+  function editItem(name, qty, id) {
+    console.log(name + "-----" + id);
+
+    const newItem = { name, qty };
+    fetch("http://localhost:3000/items/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newItem),
+    });
   }
 
   return (

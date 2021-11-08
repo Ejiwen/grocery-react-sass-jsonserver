@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-const AddItem = ({ addItem }) => {
+const AddItem = ({ addItem, editItem, info }) => {
   const [item, setItem] = useState();
   const [qty, setQty] = useState(0);
 
   function sendItem(e) {
     e.preventDefault();
-    addItem(item, qty);
+    info ? editItem(item, qty, info.elmId) : addItem(item, qty);
   }
 
   return (
@@ -14,7 +14,7 @@ const AddItem = ({ addItem }) => {
       <form onSubmit={sendItem}>
         <input
           type="text"
-          placeholder="Grocery item"
+          placeholder={info ? info.elmName : "Grocery Item"}
           name="name"
           onChange={(e) => setItem(e.target.value)}
         ></input>
@@ -22,7 +22,7 @@ const AddItem = ({ addItem }) => {
           type="number"
           min="0"
           max="10"
-          placeholder="Quantity"
+          placeholder={info ? info.elmQty : "Grocery Quantity"}
           name="qty"
           onChange={(e) => setQty(e.target.value)}
         ></input>
