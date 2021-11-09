@@ -6,13 +6,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: $color-bg-primary;
+}
+
 .container {
   height: 100vh;
   display: grid;
   grid-template-areas: "aside header header" "aside main main" "footer footer footer";
   //grid-template-rows: auto 20px;
-}
-
-body {
-  background-color: $color-bg-primary;
 }

@@ -1,14 +1,9 @@
 {
   "items": [
     {
-      "name": "B",
-      "qty": "3",
+      "name": "Banana",
+      "qty": "4",
       "id": 2
-    },
-    {
-      "name": "Carottes",
-      "qty": "2",
-      "id": 3
     },
     {
       "name": "ewqsd",
@@ -16,14 +11,19 @@
       "id": 5
     },
     {
-      "name": "edseds",
-      "qty": "10",
-      "id": 8
-    },
-    {
       "name": "wsedx",
       "qty": "1",
       "id": 9
+    },
+    {
+      "name": "csdcdc",
+      "qty": "10",
+      "id": 10
+    },
+    {
+      "name": "Tangel",
+      "qty": "3",
+      "id": 11
     }
   ]
 }

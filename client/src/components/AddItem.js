@@ -26,7 +26,7 @@ const AddItem = ({ addItem, editItem, info }) => {
           name="qty"
           onChange={(e) => setQty(e.target.value)}
         ></input>
-        <input type="submit" value="ADD" />
+        <input type="submit" value={info ? "UPDATE" : "ADD"} />
       </form>
     </div>
   );

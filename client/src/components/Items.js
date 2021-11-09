@@ -26,10 +26,8 @@ const Items = ({ items, removeItem, editItem }) => {
       <ul>
         {items.map((item) => (
           <li>
-            {item.name} <span>{item.qty}</span>
-            <span onClick={handleDelete} data-index={item.id}>
-              DELETE
-            </span>
+            <span> {item.name} </span>
+            <span>{item.qty}</span>
             <span
               onClick={handleEdit}
               data-item={item.name}
@@ -37,6 +35,9 @@ const Items = ({ items, removeItem, editItem }) => {
               data-index={item.id}
             >
               EDIT
+            </span>
+            <span onClick={handleDelete} data-index={item.id}>
+              DELETE
             </span>
           </li>
         ))}

@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 
 const MODAL_STYLES = {
   position: "fixed",
+  borderRadius: "10px",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -20,13 +21,25 @@ const OVERLAY_STYLES = {
   zIndex: 1000,
 };
 
+const BTN_CLOSE = {
+  position: "absolute",
+  top: "5px",
+  left: "5px",
+  color: "red",
+  fontWeight: "bolder",
+  fontFamily: "sans-serif",
+  cursor: "pointer",
+};
+
 const Modal = ({ children, open, isOpen }) => {
   if (!open) return null;
 
   return createPortal(
     <div style={OVERLAY_STYLES}>
       <div style={MODAL_STYLES}>
-        <button onClick={isOpen}>Close Modal</button>
+        <span style={BTN_CLOSE} onClick={isOpen}>
+          X
+        </span>
         {children}
       </div>
     </div>,

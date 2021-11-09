@@ -26,9 +26,36 @@ main {
       ul {
         list-style: none;
         li {
-          padding-bottom: 0.7rem;
+          padding: 0.3rem;
+          display: flex;
+          justify-content: space-around;
+          width: 500px;
+          &:nth-child(odd) {
+            background-color: rgb(255, 255, 255);
+          }
           span {
             padding: 0 10px;
+            cursor: pointer;
+            &:nth-child(1) {
+              display: inline-block;
+              min-width: 200px;
+            }
+            &:nth-child(2) {
+              width: 30px;
+              height: 30px;
+              order: -1;
+              padding: 7px;
+              background: #fe8402;
+              color: white;
+              border-radius: 100%;
+              text-align: center;
+            }
+            &:nth-child(3) {
+              color: green;
+            }
+            &:nth-child(4) {
+              color: red;
+            }
           }
         }
       }

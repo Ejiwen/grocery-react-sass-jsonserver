@@ -1,0 +1,17 @@
+#modal {
+  display: flex;
+  gap: 50px;
+  .groceries__form {
+    input {
+      display: block;
+      padding: 10px;
+      margin: 10px;
+      width: 15em;
+
+      &[type="button"] {
+        border: 2px solid green;
+        cursor: pointer;
+      }
+    }
+  }
+}
