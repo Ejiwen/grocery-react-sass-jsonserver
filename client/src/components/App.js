@@ -3,7 +3,6 @@ import axios from "axios";
 import Layout from "./Layout.js";
 import Items from "./Items.js";
 import AddItem from "./AddItem.js";
-
 const App = () => {
   const [items, setItems] = useState([]);
 

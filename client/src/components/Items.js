@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AddItem from "./AddItem.js";
 import Modal from "./Modal.js";
+import ThemeContext from "./ThemeContext";
 
 const Items = ({ items, removeItem, editItem }) => {
   const [editable, setEditable] = useState(false);
   const [elm, setElm] = useState({});
+  const [theme] = useContext(ThemeContext);
+
   function handleDelete(e) {
     removeItem(e.target.dataset.index);
   }
@@ -22,7 +25,7 @@ const Items = ({ items, removeItem, editItem }) => {
   }
 
   return (
-    <div className="groceries__list">
+    <div className="groceries__list" style={{ backgroundColor: theme }}>
       <ul>
         {items.map((item) => (
           <li>
