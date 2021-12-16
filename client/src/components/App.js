@@ -12,11 +12,15 @@ const App = () => {
   const [items, setItems] = useState([]);
 
   const fetchData = useCallback(() => {
-    fetch("http://localhost:3000/items")
-      .then((response) => response.json())
-      .then((data) => {
-        setItems(data);
-      });
+    let items = [];
+    index
+      .browseObjects({
+        attributesToRetrieve: ["name", "qty"],
+        batch: (batch) => {
+          items = items.concat(batch);
+        },
+      })
+      .then(() => setItems(items));
   }, []);
 
   useEffect(() => {
@@ -25,32 +29,16 @@ const App = () => {
 
   function addItem(name, qty) {
     const newItem = { name, qty };
-    fetch("http://localhost:3000/items", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newItem),
+    console.log(newItem);
+    index.saveObject(newItem, {
+      autoGenerateObjectIDIfNotExist: true,
     });
   }
 
-  function removeItem(id) {
-    fetch("http://localhost:3000/items/" + id, {
-      method: "DELETE",
-    }).then(() => console.log("The item is deleted ..."));
-  }
+  function removeItem(id) {}
 
   function editItem(name, qty, id) {
-    console.log(name + "-----" + id);
-
     const newItem = { name, qty };
-    fetch("http://localhost:3000/items/" + id, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newItem),
-    });
   }
 
   return (
