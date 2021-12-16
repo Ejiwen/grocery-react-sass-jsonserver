@@ -5,8 +5,8 @@ import Items from "./Items.js";
 import AddItem from "./AddItem.js";
 // Algolia Search
 const algoliasearch = require("algoliasearch");
-const client = algoliasearch("I4LEILP8NN", "b9ef79e421670390916bb3352cd57983");
-const index = client.initIndex("grocery_items");
+const client = algoliasearch("***", "*******");
+const index = client.initIndex("*********");
 
 const App = () => {
   const [items, setItems] = useState([]);
