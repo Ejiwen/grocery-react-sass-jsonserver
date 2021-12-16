@@ -4,7 +4,7 @@ import Header from "./Header";
 import ThemeContext from "./ThemeContext";
 
 const Layout = ({ children }) => {
-  const theme = useState("#27272a");
+  const theme = useState("orange");
 
   return (
     <ThemeContext.Provider value={theme}>

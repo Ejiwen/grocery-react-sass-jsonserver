@@ -3,13 +3,20 @@ import axios from "axios";
 import Layout from "./Layout.js";
 import Items from "./Items.js";
 import AddItem from "./AddItem.js";
+// Algolia Search
+const algoliasearch = require("algoliasearch");
+const client = algoliasearch("I4LEILP8NN", "b9ef79e421670390916bb3352cd57983");
+const index = client.initIndex("grocery_items");
+
 const App = () => {
   const [items, setItems] = useState([]);
 
   const fetchData = useCallback(() => {
     fetch("http://localhost:3000/items")
       .then((response) => response.json())
-      .then((data) => setItems(data));
+      .then((data) => {
+        setItems(data);
+      });
   }, []);
 
   useEffect(() => {
